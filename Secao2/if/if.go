@@ -10,4 +10,13 @@ func main() {
 		salarioMaisBonus += bonus
 	}
 	fmt.Println(salarioMaisBonus)
+
+	var ehCarro bool = false
+	var valorAuto = 1000.00
+	if ehCarro {
+		valorAuto += 55.50
+	} else {
+		valorAuto += 20.5
+	}
+	fmt.Println("Valor final: ", valorAuto)
 }
