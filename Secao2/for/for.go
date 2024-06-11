@@ -7,4 +7,18 @@ func main() {
 		fmt.Println(i)
 	}
 
+	texto := "palavra"
+	tamanho := len(texto)
+	j := 0
+	for i := 0; i < len(texto); i++ {
+		if string(texto[i]) == "r" {
+			break
+		}
+		fmt.Println(string(texto[i]))
+	}
+	fmt.Println()
+	for j < tamanho {
+		fmt.Println(string(texto[j]))
+		j++
+	}
 }
