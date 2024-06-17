@@ -20,8 +20,16 @@ func main() {
 	}
 
 	fmt.Println(compra)
-	var novaCompra model.Compra
-	novaCompra.InicializaCompra()
-	fmt.Println(novaCompra)
+	var compraVazia model.Compra
+	compraVazia.InicializaCompra()
+	fmt.Println(compraVazia)
+
+	novaCompra, err := model.NovaCompra(time.Now(), "AAA", []string{"banana", "pera", "uva"})
+	if err != nil {
+		fmt.Println(err)
+		return
+	} else {
+		fmt.Println(*novaCompra)
+	}
 
 }
