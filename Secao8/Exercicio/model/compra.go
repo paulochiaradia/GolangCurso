@@ -1,6 +1,8 @@
 package model
 
-import "time"
+import (
+	"time"
+)
 
 type Compra struct {
 	Data    time.Time
@@ -10,4 +12,12 @@ type Compra struct {
 
 type ItemDaCompra struct {
 	Item string
+}
+
+func (c *Compra) InicializaCompra() *Compra {
+	return &Compra{
+		Data:    time.Time{},
+		Mercado: "",
+		Itens:   make([]ItemDaCompra, 0),
+	}
 }

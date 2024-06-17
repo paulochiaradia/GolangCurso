@@ -20,4 +20,8 @@ func main() {
 	}
 
 	fmt.Println(compra)
+	var novaCompra model.Compra
+	novaCompra.InicializaCompra()
+	fmt.Println(novaCompra)
+
 }
